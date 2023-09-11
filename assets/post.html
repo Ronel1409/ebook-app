@@ -1,0 +1,131 @@
+<!doctype html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>Post</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="../styles/bootstrap-5.3/bootstrap-5.3/css/bootstrap.css">
+        <link rel="stylesheet" href="../styles/bootstrap-5.3/bootstrap-5.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../icons/fontawesome-free/css/all.css">
+        <link rel="stylesheet" href="../icons/css/simple-line-icons.css">
+        <link rel="stylesheet" href="../styles/tachyons.css_7.0.1-5/unpkg/tachyons.css">
+        <link rel="stylesheet" href="../styles/global.css">
+
+        <script>
+            const fileInput = () => {
+                    document.querySelector('#file-upload').onchange = function() {
+                    document.querySelector('#file-name').textContent = this.files[0].name
+                }
+            }
+        </script>
+
+    </head>
+    <body>    
+
+        <header class="" style="position: fixed; width: 100%; background-color: #ffffff;">
+          <nav class="navbar navbar-expand-lg">
+            <div class="container">
+              <a class="navbar-brand" href="profile.html"><img src="../images/team-image3.jpg" alt="user" class="br3" width="45px" height="45px"></a>
+              <a class="navbar-brand" href="index.html"><h3>Upload</h3></a>
+              <a class="navbar-brand" href="https://shopbeta-online.onrender.com"><h3 class="icon-handbag"></h3></a>
+            </div>
+          </nav>
+        </header>
+
+        <main>
+            <div class="w-100 pv5 tc dib">
+                <div class="dib pa2">
+                    <div style="font-size: 35px;" class="ph2 fw6 tc">
+                        <div class="br3 bw2 b--black pa2">
+                            <div class="pt2">
+                                <p class="hover-mid-gay f5 tl fw5 orange pointer">Select document</p>
+                                <div class="tc">
+                                    <label>
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi green bi-file-earmark-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9 1H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h5v-1H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h5v2.5A1.5 1.5 0 0 0 10.5 6H13v2h1V6L9 1z"/>
+                                            <path fill-rule="evenodd" d="M13.5 10a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1H13v-1.5a.5.5 0 0 1 .5-.5z"/>
+                                            <path fill-rule="evenodd" d="M13 12.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0v-2z"/>
+                                        </svg>
+                                        <div id="file-name" class="hover-mid-gay f5 fw5 orange pointer"></div>
+                                        <input style="display: none;" onclick="fileInput()" id="file-upload" type="file" name="images" className="images pointer pa3 w-100" required/>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="pv1">
+                                <p class="tl f5">Cousre title</p>
+                                <div class="form-group">
+                                    <input type="text" class="form-control br3" id="course-title" placeholder="e.g Physical Chemistry 1">
+                                </div>
+                            </div>
+                            <div class="pv1">
+                                <p class="tl f5"Course code</p>
+                                <div class="form-group">
+                                    <input type="text" class="form-control br3" id="course-code" placeholder="e.g CHM 101">
+                                </div>
+                            </div>
+                            <div class="pv1">
+                                <p class="tl f5">Course author/lecturer</p>
+                                <div class="form-group">
+                                    <input type="text" class="form-control br3" id="email" placeholder="course author/lecturer's name">
+                                </div>
+                            </div>
+                            <div class="">
+                                <p class="tl f5">Introduction</p>
+                                <div class="form-group">
+                                    <textarea id="myInput" name="introduction" class="form-control br3 ba pa3 w-100 h4" required placeholder="Write a short introduction on the course note preferiably from the document itself" aria-label="With textarea"></textarea>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                    <div style="background-color: #ffffff; border-bottom: 1px thin black; bottom: 0; left: 0; margin-top: 1rem; padding: 1rem;" class="tc pv4">
+                        <a href="profile.html">
+                            <button type="button" class="btn shadow-5 ph6 pa3 f4 br-pill btn-success">
+                                <small>Post</small>
+                                <small class="pv1 icon-docs ph2 white"></small>
+                             </button>
+                        </a>
+                    </div> 
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="fw5 tc" style="position: fixed; width: 100%; background-color: #ffffff; border-bottom: 1px thin black; bottom: 0; left: 0; margin-top: 1rem; padding: 1rem;">
+                <nav style="font-size: 27px;" class="container tc">
+                    <a class="navbar-brand" href="home.html">
+                        <small class="f4 hover-bg-light-gray br3 icon-home pr4 fw6"></small> 
+                    </a> 
+                    <a class="navbar-brand" href="#">
+                        <small class="f4 hover-bg-light-gray br3  ph2 fw6 "></small> 
+                    </a>
+                    <a class="navbar-brand" href="search.html">
+                        <small class="f4 hover-bg-light-gray br3 icon-magnifier ph4 fw6 "></small> 
+                    </a>
+                    <a class="navbar-brand" href="#">
+                        <small class="f4 hover-bg-light-gray br3  ph2 fw6 "></small> 
+                    </a>
+                    <a class="navbar-brand" href="#">
+                        <small class="f4 hover-bg-light-gray br3 icon-plus ph4 fw6"></small>  
+                    </a>
+                    <a class="navbar-brand" href="#">
+                        <small class="f4 hover-bg-light-gray br3  ph2 fw6 "></small> 
+                    </a>
+                    <a class="navbar-brand" href="saved.html">
+                        <small class="f4 hover-bg-light-gray br3 fa fa-bookmark pl4 fw6"></small>  
+                    </a>
+                </nav>
+            </div>
+        </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+        <script src="./../styles/bootstrap-5.3/bootstrap-5.3/js/bootstrap.min.js"></script>
+
+    </body>
+</html>

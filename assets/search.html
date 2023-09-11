@@ -1,0 +1,159 @@
+<!doctype html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>Search</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="../styles/bootstrap-5.3/bootstrap-5.3/css/bootstrap.css">
+        <link rel="stylesheet" href="../styles/bootstrap-5.3/bootstrap-5.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../icons/fontawesome-free/css/all.css">
+        <link rel="stylesheet" href="../icons/css/simple-line-icons.css">
+        <link rel="stylesheet" href="../styles/tachyons.css_7.0.1-5/unpkg/tachyons.css">
+        <link rel="stylesheet" href="../styles/global.css">
+
+        <script>
+            fetch("https://shopbeta-api.onrender.com/products", {
+                method: "GET",
+            })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data)
+
+                const error = document.getElementById('error')
+                error.style['display'] = 'none'  
+            })
+            .catch((err) => {
+                console.log(err.message)
+
+                const error = document.getElementById('error')
+                error.style['display'] = 'contents'
+
+                const blank = document.getElementById('blank')
+                blank.style['display'] = 'none'
+            })
+        </script>
+
+    </head>
+    <body>    
+
+        <header class="pv2" style="position: fixed; width: 100%; background-color: #ffffff;">
+          <nav class="navbar navbar-expand-lg">
+            <div class="container">
+              <a class="" href="profile.html"><img src="../images/team-image3.jpg" alt="user" class="br3" width="45px" height="45px"></a>
+              <input type="search" class="form-control navbar-brand br-pill w-70" id="search" placeholder="Search...">
+              <small class=""><h3 class="icon-microphone"></h3></small>
+            </div>
+          </nav>
+        </header>
+
+        <main>
+            <section style="display: none;" id="results" class="first-section">
+                <div class="container">
+                    <div class="row pv4">
+                        <div class="col-md-3 col-sm-6">
+                        <div class="service-item">
+                            <div class="icon">
+                            <img src="img/first-icon.png" alt="">
+                            </div>
+                            <h4>Quick Editing</h4>
+                            <p>Aliquam ex velit, viverra eu tristique vel, rhoncus nec ligula. In vel massa sed dolor pharetra interdum vitae posuere.</p>
+                        </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                        <div class="service-item">
+                            <div class="icon">
+                            <img src="img/second-icon.png" alt="">
+                            </div>
+                            <h4>Responsive Layout</h4>
+                            <p>Sed pulvinar ipsum id leo volutpat, in convallis lectus molestie. Aliquam nisi sapien, faucibus eu consequat id, egestas vitae augue.</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </section>  
+            <section id="blank" class="second-section">
+                <div class="container">
+                    <div class="pa2 pv5">
+                        <div class="">
+                            <div class='tc pt3' style="font-size: 27px; font-weight: 500;"><img src="../images/search-empty.png" alt="search-empty-img" className="tc" width="300px" height="300px" /></div>
+                            <div class="tc">
+                                <div class="tc">
+                                    <p class="fw6 f4">Result Not Found</p>
+                                    <p class="fw4 gray f5">Whoops... this information is not available!</p>
+                                </div>
+                                <div class="pv3 tc grow">
+                                    <a href="home.html">
+                                        <button type="button" class="btn ph5 pa3 shadow-5 f4 br-pill btn-success">
+                                            <small class="pv1">Go Back</small>
+                                         </button>
+                                    </a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>   
+            <section style="display: none;" id="error" class="third-section">
+                <div class="container">
+                    <div class="pa2 pv5">
+                        <div class="">
+                            <div class='tc pt4' style="font-size: 27px; font-weight: 500;"><img src="../images/network-error.png" alt="error-img" className="tc" width="270px" height="270px" /></div>
+                            <div class="tc">
+                                <div class="tc">
+                                    <p class="fw6 f4">Network Error</p>
+                                    <p class="fw4 gray f5">Something went wrong!</p>
+                                </div>
+                                <div class="pv3 tc grow">
+                                    <a href="#">
+                                        <button type="button" class="btn ph5 pa3 shadow-5 f4 br-pill btn-success">
+                                            <small class="pv1">Refresh</small>
+                                         </button>
+                                    </a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="fw5 tc" style="position: fixed; width: 100%; background-color: #ffffff; border-bottom: 1px thin black; bottom: 0; left: 0; margin-top: 1rem; padding: 1rem;">
+                <nav style="font-size: 27px;" class="container tc">
+                    <a class="navbar-brand" href="home.html">
+                        <small class="f4 hover-bg-light-gray br3 icon-home pr4 fw6"></small> 
+                    </a> 
+                    <a class="navbar-brand" href="#">
+                        <small class="f4 hover-bg-light-gray br3  ph2 fw6 "></small> 
+                    </a>
+                    <a class="navbar-brand" href="#">
+                        <small class="f4 hover-bg-light-gray br3 icon-magnifier ph4 fw6 "></small> 
+                    </a>
+                    <a class="navbar-brand" href="#">
+                        <small class="f4 hover-bg-light-gray br3  ph2 fw6 "></small> 
+                    </a>
+                    <a class="navbar-brand" href="post.html">
+                        <small class="f4 hover-bg-light-gray br3 icon-plus ph4 fw6"></small>  
+                    </a>
+                    <a class="navbar-brand" href="#">
+                        <small class="f4 hover-bg-light-gray br3  ph2 fw6 "></small> 
+                    </a>
+                    <a class="navbar-brand" href="saved.html">
+                        <small class="f4 hover-bg-light-gray br3 fa fa-bookmark pl4 fw6"></small>  
+                    </a>
+                </nav>
+            </div>
+        </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+        <script src="./../styles/bootstrap-5.3/bootstrap-5.3/js/bootstrap.min.js"></script>
+
+    </body>
+</html>

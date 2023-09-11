@@ -1,0 +1,71 @@
+<!doctype html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>Change picture</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="../styles/bootstrap-5.3/bootstrap-5.3/css/bootstrap.css">
+        <link rel="stylesheet" href="../styles/bootstrap-5.3/bootstrap-5.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../icons/fontawesome-free/css/all.css">
+        <link rel="stylesheet" href="../icons/css/simple-line-icons.css">
+        <link rel="stylesheet" href="../styles/tachyons.css_7.0.1-5/unpkg/tachyons.css">
+        <link rel="stylesheet" href="../styles/global.css">
+
+        <script>
+            const fileInput = () => {
+                    document.querySelector('#file-upload').onchange = function() {
+                    document.querySelector('#file-name').textContent = this.files[0].name
+                }
+            }
+        </script>
+
+    </head>
+    <body>    
+
+        <main>
+            <div class="w-100 pv5 tc dib">
+                <div class="dib pa2">
+                    <div class="tc">
+                        <div class="pa2">
+                            <p class="pv4 fw6 tc ph3">
+                                <small class="f4 orange">Change profile picture<br/></small>
+                                <small class="green f5">Take a few seconds to upload a profile photo.</small>
+                            </p>
+                        <div class='tc code' style="font-size: 27px; font-weight: 500;"><img src="../images/team-image3.jpg" alt="avatar" class="tc br-pill" width="200px" height="200px" /></div>
+                            <form action="#" method="post" encType="multipart/form-data">
+                                <div class="pv2 tc">
+                                    <div class="pv3 pa2 tc">
+                                        <label>
+                                            <small class="icon-camera hover-mid-gay f3 orange pointer"></small><br/>
+                                            <small id="file-name" class="hover-mid-gay f5 fw5 orange pointer">Select Image</small>
+                                            <input style="display: none;" onclick="fileInput()" id="file-upload" type="file" name="avatar" class="avatar pointer pa2 w-100"/>
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div style="background-color: #ffffff; border-bottom: 1px thin black; bottom: 0; left: 0; margin-top: 1rem; padding: 1rem;" class="tc pv4">
+                        <a href="login.html">
+                            <button type="button" class="btn shadow-5 w-100 pa3 f4 br-pill btn-success">
+                                <small class="pv1 white">Submit</small>
+                             </button>
+                        </a>
+                    </div> 
+                </div>
+            </div> 
+        </main>
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+        <script src="./../styles/bootstrap-5.3/bootstrap-5.3/js/bootstrap.min.js"></script>
+
+    </body>
+</html>
